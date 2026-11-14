@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://cfoyq0g8250yn"]
+
+[sub_resource type="GDScript" id="GDScript_yihbo"]
+
+[node name="dialog_ui" type="Control" unique_id=1142985682]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="dialogbox" type="PanelContainer" parent="." unique_id=835758193]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 501.0
+offset_right = 1151.0
+offset_bottom = 647.0
+script = SubResource("GDScript_yihbo")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="dialogbox" unique_id=1068593597]
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 27
+text = "the line of dialog
+"
+
+[node name="speakbox" type="Control" parent="." unique_id=1212365207]
+layout_mode = 1
+anchors_preset = 0
+offset_left = 1.0
+offset_top = 454.0
+offset_right = 194.0
+offset_bottom = 502.0
+
+[node name="Polygon2D" type="Polygon2D" parent="speakbox" unique_id=136053122]
+color = Color(0.40910837, 0.55, 0.39050004, 0.6627451)
+polygon = PackedVector2Array(1, -4, 209, -4, 209, -4, 244, 45, -4, 46)
+
+[node name="Label" type="Label" parent="speakbox" unique_id=1843304286]
+layout_mode = 0
+offset_top = 3.0
+offset_right = 193.0
+offset_bottom = 45.0
+theme_override_font_sizes/font_size = 30
+text = "boss"
+
+[node name="Control" type="Control" parent="." unique_id=1244281209]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Polygon2D" type="Polygon2D" parent="." unique_id=1493779886]
+position = Vector2(28, 406)
+polygon = PackedVector2Array(1060, 137, 1093, 161, 1093, 163, 1061, 188)
+
+[node name="Button" type="Button" parent="Polygon2D" unique_id=1252299611]
+offset_left = 1057.0
+offset_top = 135.0
+offset_right = 1104.0
+offset_bottom = 191.0

@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://cxi37qlrlskdf"]
+
+[ext_resource type="Script" uid="uid://bv8k71bccokwh" path="res://character_1.gd" id="1_bi1wl"]
+[ext_resource type="Texture2D" uid="uid://deycvsyvy4k63" path="res://characters/anim ch1.2.png" id="1_pw62m"]
+[ext_resource type="Texture2D" uid="uid://dim7atin13tym" path="res://characters/anim ch1.png" id="2_jb520"]
+[ext_resource type="Texture2D" uid="uid://cj0tyt31mmdv5" path="res://background/ch1.png" id="2_rrsjw"]
+[ext_resource type="Texture2D" uid="uid://s4e0ijndabnx" path="res://characters/anim ch 1,4.png" id="3_7mk00"]
+[ext_resource type="Texture2D" uid="uid://cc3ut6pmvrjiv" path="res://characters/anim ch 1.3.png" id="4_bi1wl"]
+[ext_resource type="PackedScene" uid="uid://cfoyq0g8250yn" path="res://dialog_ui.tscn" id="7_yy2sw"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gc083"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_pw62m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_jb520")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_7mk00")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_bi1wl")
+}],
+"loop": 1,
+"name": &"talking",
+"speed": 4.0
+}]
+
+[node name="character1" type="Node2D" unique_id=190751896]
+script = ExtResource("1_bi1wl")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=161831020]
+offset_right = 1151.0
+offset_bottom = 646.0
+texture = ExtResource("2_rrsjw")
+
+[node name="character" type="AnimatedSprite2D" parent="." unique_id=1736268929]
+unique_name_in_owner = true
+position = Vector2(567, 401)
+scale = Vector2(0.24560545, 0.23205565)
+sprite_frames = SubResource("SpriteFrames_gc083")
+animation = &"talking"
+frame = 3
+frame_progress = 0.77788335
+
+[node name="dialog_ui" parent="." unique_id=1142985682 instance=ExtResource("7_yy2sw")]
+unique_name_in_owner = true

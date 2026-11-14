@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://bwmlywdiiij0b"]
+
+[ext_resource type="Texture2D" uid="uid://pkfrorhgo6bl" path="res://background/gn.png" id="1_3h3k7"]
+[ext_resource type="Script" uid="uid://ciwnku5yod0xu" path="res://menu.gd" id="2_3h3k7"]
+
+[node name="Node2D" type="Node2D" unique_id=828354240]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1831486072]
+layer = -1
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=1425078333]
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -14.0
+offset_top = -44.0
+offset_right = -7.0
+offset_bottom = 26.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_3h3k7")
+expand_mode = 1
+
+[node name="menu" type="Node2D" parent="." unique_id=507575265]
+script = ExtResource("2_3h3k7")
+
+[node name="start" type="Button" parent="menu" unique_id=112563735]
+offset_left = 60.0
+offset_top = 76.0
+offset_right = 290.0
+offset_bottom = 157.0
+theme_override_font_sizes/font_size = 40
+text = "start"
+
+[node name="start2" type="Button" parent="menu" unique_id=156865822]
+offset_left = 60.0
+offset_top = 184.0
+offset_right = 290.0
+offset_bottom = 265.0
+theme_override_font_sizes/font_size = 40
+text = "quit"
+
+[connection signal="pressed" from="menu/start" to="menu" method="_on_start_pressed"]
+[connection signal="pressed" from="menu/start2" to="menu" method="_on_start_2_pressed"]

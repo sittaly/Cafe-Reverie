@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://bi1i8i7un12yk"]
+
+[ext_resource type="PackedScene" uid="uid://dwu7yj2gaoh8y" path="res://1_scene.tscn" id="1_8xuhg"]
+[ext_resource type="Script" uid="uid://b7uyxha8tqfqc" path="res://1.gd" id="1_snvwx"]
+
+[node name="Node2D" type="Node2D" unique_id=1119604919]
+script = ExtResource("1_snvwx")
+
+[node name="1scene" parent="." unique_id=321415237 instance=ExtResource("1_8xuhg")]
+
+[node name="Polygon2D" type="Polygon2D" parent="." unique_id=1899507977]
+position = Vector2(0, -25.460892)
+scale = Vector2(1, 1.0769218)
+polygon = PackedVector2Array(1089, 526, 1113, 554, 1088, 578, 1085, 560)
+
+[node name="Button" type="Button" parent="Polygon2D" unique_id=1032719667]
+offset_left = 1086.0
+offset_top = 521.3571
+offset_right = 1117.0
+offset_bottom = 578.9286
+
+[connection signal="pressed" from="Polygon2D/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Polygon2D/Button" to="1scene" method="_on_button_pressed"]
